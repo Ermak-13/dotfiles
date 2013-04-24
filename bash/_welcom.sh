@@ -1,3 +1,0 @@
-_welcom() {
-    echo 'welcom'
-}
