@@ -10,4 +10,5 @@ _patch() {
     path=$_PATCH_PATH/$current_date/$name.html
     echo $path
     svn diff --git --no-diff-deleted -x -p | pygmentize -l diff -f html -O full,style=emacs > $path
+    chromium-browser $path &
 }
