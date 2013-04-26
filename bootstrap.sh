@@ -10,8 +10,8 @@ require() {
 	done
 }
 
-if [ ! -e BOOTSTRAP_LOCK ] ; then
-    touch BOOTSTRAP_LOCK
+if [ ! -e $BOOTSTRAP_LOCK ] ; then
+    touch $BOOTSTRAP_LOCK
 fi
 source $BOOTSTRAP_LOCK
 
