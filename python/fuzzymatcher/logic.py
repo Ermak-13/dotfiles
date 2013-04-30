@@ -26,12 +26,19 @@ class ProjectsFinder(Finder):
     def find_projects(self, parentdir):
         dirs = self.get_subdirectories(parentdir)
         for directory in dirs:
-            if os.path.exists(os.path.join(directory, '.svn')):
+            if self.is_project_dir(directory):
                 self.results.append(directory)
             else:
                 self.find_projects(directory)
 
         return self.results
+
+    def is_project_dir(self, directory):
+        is_project_dir = False
+        for detect_file in fuzzymatcher_settings.DETECT_FILES:
+            is_project_dir = is_project_dir or os.path.exists(os.path.join(directory, detect_file))
+        
+        return is_project_dir
 
     def get_subdirectories(self, parentdir):
         dirs = []
