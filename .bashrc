@@ -1,5 +1,6 @@
 source ~/dotfiles/shell/.django_bash_completion.sh
 
+export PYTHONPATH=${PYTHONPATH}:$HOME/dotfiles/python
 export PYTHONIOENCODING=utf-8
 
 
