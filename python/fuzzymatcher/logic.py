@@ -19,7 +19,7 @@ class Finder(object):
 
 
 class ProjectsFinder(Finder):
-    def find(self, parentdir=fuzzymatcher_settings.WORKSPACE_DIR):
+    def find(self, parentdir):
         self.results = []
         return self.find_projects(parentdir)
 
@@ -51,7 +51,7 @@ class ProjectsFinder(Finder):
 
 
 class FilesFinder(Finder):
-    def find(self, parentdir=fuzzymatcher_settings.WORKSPACE_DIR):
+    def find(self, parentdir):
         self.results = []
         return self.find_files(parentdir)
 
@@ -64,7 +64,7 @@ class FilesFinder(Finder):
 
 
 class DirsFinder(Finder):
-    def find(self, parentdir=fuzzymatcher_settings.WORKSPACE_DIR):
+    def find(self, parentdir):
         self.results = []
         return self.find_dirs(parentdir)
 

@@ -8,7 +8,7 @@ __all__ = (
 
 
 default_settings = {
-    'WORKSPACE_DIR': '%s/workspace' % os.environ.get('HOME'),
+    'DEFAULT_PATH': os.path.abspath('.'),
     'DETECT_FILES': ['.svn', '.git', '.venvrc'],
     'LIMIT': 10,
 }

@@ -25,21 +25,23 @@ class Command(object):
 
     def run(self):
         (options, arguments) = self.parser.parse_args()
+        self.check_args(options, arguments)
 
         self.options = options
-        self.arguments = arguments
 
-        self.check_args()
+        self.pattern = arguments[0]
+        print fuzzymatcher_settings.DEFAULT_PATH
+        self.parentdir = arguments[1] if len(arguments) >= 2 else fuzzymatcher_settings.DEFAULT_PATH
 
-        results = self.choose_finder().find()
-        print process.extract(arguments[0], results, limit=fuzzymatcher_settings.LIMIT)
+        results = self.choose_finder().find(self.parentdir)
+        print process.extract(self.pattern, results, limit=fuzzymatcher_settings.LIMIT)
 
-    def check_args(self):
-        if (self.options.only_dirs + self.options.only_files + self.options.only_projects) > 1:
+    def check_args(self, options, arguments):
+        if (options.only_dirs + options.only_files + options.only_projects) > 1:
             raise ValueError('--only-dirs & --only-files flags are specified together.')
 
-        if len(self.arguments) <= 0:
-            raise ValueError('file pattern are not specified.')
+        if len(arguments) <= 0:
+            raise ValueError('arguments are not specified.')
 
     def choose_finder(self):
         if self.options.only_projects:
