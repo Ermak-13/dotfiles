@@ -3,8 +3,8 @@
 from optparse import OptionParser, make_option
 from fuzzywuzzy import process
 
-from fuzzymatcher import settings as fuzzymatcher_settings
-from fuzzymatcher.logic import ProjectsFinder, DirsFinder, FilesFinder
+from fuzzyfinder import settings as fuzzymatcher_settings
+from fuzzyfinder.logic import ProjectsFinder, DirsFinder, FilesFinder
 
 
 class Command(object):

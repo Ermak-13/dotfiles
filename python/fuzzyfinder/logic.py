@@ -2,7 +2,7 @@
 
 import os
 
-from fuzzymatcher import settings as fuzzymatcher_settings
+from fuzzyfinder import settings as fuzzymatcher_settings
 
 __all__ = (
     'ProjectsFinder',
