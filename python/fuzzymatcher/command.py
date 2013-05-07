@@ -30,11 +30,10 @@ class Command(object):
         self.options = options
 
         self.pattern = arguments[0]
-        print fuzzymatcher_settings.DEFAULT_PATH
-        self.parentdir = arguments[1] if len(arguments) >= 2 else fuzzymatcher_settings.DEFAULT_PATH
+        self.parentdir = arguments[1] if len(arguments) >= 2 else fuzzymatcher_settings.DEFAULT_PARENTDIR
 
         results = self.choose_finder().find(self.parentdir)
-        print process.extract(self.pattern, results, limit=fuzzymatcher_settings.LIMIT)
+        return process.extractOne(self.pattern, results)[0]
 
     def check_args(self, options, arguments):
         if (options.only_dirs + options.only_files + options.only_projects) > 1:
