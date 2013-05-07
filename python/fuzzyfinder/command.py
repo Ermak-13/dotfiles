@@ -33,7 +33,7 @@ class Command(object):
         self.parentdir = arguments[1] if len(arguments) >= 2 else fuzzymatcher_settings.DEFAULT_PARENTDIR
 
         results = self.choose_finder().find(self.parentdir)
-        return process.extractOne(self.pattern, results)[0]
+        print process.extractOne(self.pattern, results)[0]
 
     def check_args(self, options, arguments):
         if (options.only_dirs + options.only_files + options.only_projects) > 1:

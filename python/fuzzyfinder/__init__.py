@@ -38,7 +38,7 @@ default_settings = {
 class Settings(object):
     def __init__(self):
         for k, v in default_settings.iteritems():
-            setattr(self, k, os.environ.get('FUZZYMATCHER_%s' % k, v))
+            setattr(self, k, os.environ.get('FUZZYFINDER_%s' % k, v))
 
 settings = Settings()
 
