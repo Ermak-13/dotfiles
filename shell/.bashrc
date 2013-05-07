@@ -9,6 +9,9 @@ export DOTFILES_TMUX_PATH=$DOTFILES_PATH/tmux
 source $DOTFILES_SHELL_PATH/settings.sh
 source $DOTFILES_SHELL_PATH/.django_bash_completion.sh
 
+source $DOTFILES_SHELL_PATH/reloadbashrc.sh
+source $DOTFILES_SHELL_PATH/fuzzyfinder.sh
+
 _VENV_PATH=$HOME/workspace/venv
 _venv() {
     source $_VENV_PATH/$1/bin/activate
