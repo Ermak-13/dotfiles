@@ -6,4 +6,5 @@ function _python() {
 
 function _python_clean() {
 	find . -type f -name "*.py[co]" -delete
+	echo '_python clean: *.py[co] files was removed.'
 }
