@@ -11,7 +11,7 @@ source $DOTFILES_SHELL_PATH/.django_bash_completion.sh
 
 source $DOTFILES_SHELL_PATH/context.sh
 source $DOTFILES_SHELL_PATH/python.sh
-source $DOTFILES_SHELL_PATH/reloadbashrc.sh
+source $DOTFILES_SHELL_PATH/reload.sh
 
 _VENV_PATH=$HOME/workspace/venv
 _venv() {
