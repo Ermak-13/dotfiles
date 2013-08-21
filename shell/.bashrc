@@ -59,10 +59,6 @@ _patch() {
     chromium-browser $path &
 }
 
-_svn_remove_unversioned_files() {
-    svn status | grep '^?' | awk '{print $2}' | xargs rm -rf
-}
-
 _pip_install() {
     pip install -U -r .meta/packages --find-links=http://pypi.worldoftanks.com --index-url=http://pypi.worldoftanks.com
 }
