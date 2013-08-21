@@ -9,6 +9,7 @@ export DOTFILES_TMUX_PATH=$DOTFILES_PATH/tmux
 source $DOTFILES_SHELL_PATH/settings.sh
 source $DOTFILES_SHELL_PATH/.django_bash_completion.sh
 
+source $DOTFILES_SHELL_PATH/context.sh
 source $DOTFILES_SHELL_PATH/reloadbashrc.sh
 
 _VENV_PATH=$HOME/workspace/venv
