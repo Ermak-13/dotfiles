@@ -6,11 +6,11 @@ function _reload() {
 }
 
 function _reload_bashrc() {
-    echo 'reload ~/.bashrc!'
     source $HOME/.bashrc
+    echo '_reload bashrc: ~/.bashrc was reloaded.'
 }
 
 function _reload_profile() {
-	echo 'reload ~/.profile'
 	source $HOME/.profile
+	echo '_reload profile: ~/.profile was reloaded.'
 }
