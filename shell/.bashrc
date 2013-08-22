@@ -10,7 +10,9 @@ source $DOTFILES_SHELL_PATH/settings.sh
 source $DOTFILES_SHELL_PATH/.django_bash_completion.sh
 
 source $DOTFILES_SHELL_PATH/context.sh
-source $DOTFILES_SHELL_PATH/reloadbashrc.sh
+source $DOTFILES_SHELL_PATH/python.sh
+source $DOTFILES_SHELL_PATH/reload.sh
+source $DOTFILES_SHELL_PATH/svn.sh
 
 _PATCH_PATH=$HOME/workspace/patches
 _patch() {
@@ -34,8 +36,4 @@ _svn_remove_unversioned_files() {
 
 _pip_install() {
     pip install -U -r .meta/packages --find-links=http://pypi.worldoftanks.com --index-url=http://pypi.worldoftanks.com
-}
-
-_python_clean() {
-    find . -type f -name "*.py[co]" -delete
 }
