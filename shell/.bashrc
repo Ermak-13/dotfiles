@@ -9,10 +9,10 @@ export DOTFILES_TMUX_PATH=$DOTFILES_PATH/tmux
 source $DOTFILES_SHELL_PATH/settings.sh
 source $DOTFILES_SHELL_PATH/.django_bash_completion.sh
 
-source $DOTFILES_SHELL_PATH/context.sh
 source $DOTFILES_SHELL_PATH/python.sh
 source $DOTFILES_SHELL_PATH/reload.sh
 source $DOTFILES_SHELL_PATH/svn.sh
+source $DOTFILES_SHELL_PATH/tmux.sh
 
 _PATCH_PATH=$HOME/workspace/patches
 _patch() {
