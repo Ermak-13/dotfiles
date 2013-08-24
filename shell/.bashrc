@@ -1,12 +1,12 @@
-export DOTFILES_PATH=$HOME/dotfiles
+export PYTHONIOENCODING=utf-8
 
+export DOTFILES_PATH=$HOME/dotfiles
 export DOTFILES_PYTHON_PATH=$DOTFILES_PATH/python
 export PYTHONPATH=${PYTHONPATH}:$DOTFILES_PYTHON_PATH
 
 export DOTFILES_SHELL_PATH=$DOTFILES_PATH/shell
 export DOTFILES_TMUX_PATH=$DOTFILES_PATH/tmux
 
-source $DOTFILES_SHELL_PATH/settings.sh
 source $DOTFILES_SHELL_PATH/.django_bash_completion.sh
 
 source $DOTFILES_SHELL_PATH/python.sh
