@@ -30,7 +30,3 @@ _patch() {
     svn diff --git --no-diff-deleted -x -p | pygmentize -l diff -f html -O full,style=emacs > $path
     chromium-browser $path &
 }
-
-_pip_install() {
-    pip install -U -r .meta/packages --find-links=http://pypi.worldoftanks.com --index-url=http://pypi.worldoftanks.com
-}
